@@ -1,0 +1,13 @@
+<div id="container">
+    <div *ngFor="let item of this.cartService.cart">
+        <img [src]="item.photoURL" alt="">
+        <h2>{{item.name}}</h2>
+        <h3>Đơn giá: {{item.price}} VNĐ</h3>
+        <h3>Số lượng: {{item.quantity}}</h3>
+        <h1> Tổng tiền: {{item.price*item.quantity}} VNĐ</h1>
+    </div>
+
+    <div *ngIf="this.cartService.cart.length != 0">
+        <button (click)="navigateToBill()">Xác nhận</button>
+    </div>
+</div>

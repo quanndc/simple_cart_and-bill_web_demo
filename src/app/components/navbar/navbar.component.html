@@ -1,0 +1,14 @@
+<div id="container">
+    <div class="content">
+        <a (click)="navigateToHome()">Trang chủ</a>
+        <a (click)="navigateToTshirt()">Áo</a>
+        <a>Quần</a>
+        <a>Giày</a>
+        <h2 (click)="navigateToCart()">{{this.cartService.cart.length}}</h2>
+    </div>
+</div>
+
+
+<div *ngFor="let subphoto of this.cartService.tshirt[0].subPhoto">
+    <img [src]="subphoto" alt="">
+</div>

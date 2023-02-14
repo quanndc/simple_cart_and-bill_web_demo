@@ -1,0 +1,15 @@
+<!-- <div id="container">
+    <div class="item-card">
+        <div *ngFor="let item of this.cartService.tshirt">
+            <img [src]="item.photoURL" alt="">
+            <h1>{{item.name}}</h1>
+            <h2>{{item.price}}</h2>
+            <button (click)="this.cartService.addToCart(item)">add</button>
+        </div>
+    </div>
+</div> -->
+
+
+<div *ngFor="let i of this.cartService.tshirt[0].subPhoto">
+    <img [src]="i" alt="">
+</div>
